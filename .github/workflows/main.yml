@@ -29,6 +29,12 @@ jobs:
       # install yarn
       - name: install yarn
         run: yarn install
+        
+  test:
+    needs: [build]
+    runs-on: ubuntu-latest
+    
+    steps:
       
       # run tests
       - name: run tests
